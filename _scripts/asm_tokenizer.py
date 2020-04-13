@@ -1,4 +1,4 @@
-path = './asm'
+path = './asm_timofeev'
 file = open(path, 'r')
 lines = file.readlines()
 #print(lines)
@@ -35,7 +35,7 @@ print(dict)
 
 # =================================================================
 # Проверка вхождения токенов
-checked_token = "$0"
+checked_token = "movq"
 
 sum = 0
 for token in dict.keys():
