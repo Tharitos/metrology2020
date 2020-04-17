@@ -1,0 +1,229 @@
+pushq %rbp
+.cfi_def_cfa_offset 16
+.cfi_offset %rbp, -16
+movq %rsp, %rbp
+.cfi_def_cfa_register %rbp
+movq %rdi, -8(%rbp)
+movq %rsi, -16(%rbp)
+movq %rdx, -24(%rbp)
+movq %rcx, -32(%rbp)
+movq %r8, -40(%rbp)
+movl %r9d, -44(%rbp)
+xorps %xmm0, %xmm0
+movss %xmm0, -48(%rbp)
+movss %xmm0, -52(%rbp)
+movss %xmm0, -56(%rbp)
+movss %xmm0, -60(%rbp)
+movss %xmm0, -64(%rbp)
+movl $0, -68(%rbp)
+LBB0_1:
+cmpl $100, -68(%rbp)
+jge LBB0_4
+movq -8(%rbp), %rax
+movslq -68(%rbp), %rcx
+movss (%rax,%rcx,4), %xmm0
+movss %xmm0, -72(%rbp)
+movq -16(%rbp), %rax
+movslq -68(%rbp), %rcx
+movss (%rax,%rcx,4), %xmm0
+movss %xmm0, -76(%rbp)
+movss -72(%rbp), %xmm0
+addss -48(%rbp), %xmm0
+movss %xmm0, -48(%rbp)
+movss -76(%rbp), %xmm0
+addss -52(%rbp), %xmm0
+movss %xmm0, -52(%rbp)
+movss -72(%rbp), %xmm0
+mulss -76(%rbp), %xmm0
+addss -56(%rbp), %xmm0
+movss %xmm0, -56(%rbp)
+movss -72(%rbp), %xmm0
+mulss -72(%rbp), %xmm0
+addss -60(%rbp), %xmm0
+movss %xmm0, -60(%rbp)
+movss -76(%rbp), %xmm0
+mulss -76(%rbp), %xmm0
+addss -64(%rbp), %xmm0
+movl -68(%rbp), %eax
+addl $1, %eax
+movl %eax, -68(%rbp)
+jmp LBB0_1
+movss -60(%rbp), %xmm0
+movss -48(%rbp), %xmm1
+mulss -48(%rbp), %xmm1
+movl -44(%rbp), %eax
+cvtsi2ssl %eax, %xmm2
+divss %xmm2, %xmm1
+subss %xmm1, %xmm0
+movss %xmm0, -80(%rbp)
+movss -56(%rbp), %xmm0
+movss -48(%rbp), %xmm1
+mulss -52(%rbp), %xmm1
+movl -44(%rbp), %eax
+cvtsi2ssl %eax, %xmm2
+divss %xmm2, %xmm1
+subss %xmm1, %xmm0
+movss %xmm0, -84(%rbp)
+movss -64(%rbp), %xmm0
+movss -52(%rbp), %xmm1
+mulss -52(%rbp), %xmm1
+movl -44(%rbp), %eax
+cvtsi2ssl %eax, %xmm2
+divss %xmm2, %xmm1
+subss %xmm1, %xmm0
+movss %xmm0, -88(%rbp)
+movss -84(%rbp), %xmm0
+divss -80(%rbp), %xmm0
+movq -40(%rbp), %rcx
+movss %xmm0, (%rcx)
+movss -60(%rbp), %xmm0
+mulss -52(%rbp), %xmm0
+movss -48(%rbp), %xmm1
+mulss -56(%rbp), %xmm1
+subss %xmm1, %xmm0
+movl -44(%rbp), %eax
+cvtsi2ssl %eax, %xmm1
+divss %xmm1, %xmm0
+divss -80(%rbp), %xmm0
+movq -32(%rbp), %rcx
+movss %xmm0, (%rcx)
+movss -84(%rbp), %xmm0
+cvtss2sd %xmm0, %xmm0
+movss -80(%rbp), %xmm1
+mulss -88(%rbp), %xmm1
+cvtss2sd %xmm1, %xmm1
+sqrtsd %xmm1, %xmm1
+divsd %xmm1, %xmm0
+cvtsd2ss %xmm0, %xmm0
+movss %xmm0, -92(%rbp)
+movss -64(%rbp), %xmm0
+movq -32(%rbp), %rcx
+movss (%rcx), %xmm1
+mulss -52(%rbp), %xmm1
+subss %xmm1, %xmm0
+movq -40(%rbp), %rcx
+movss (%rcx), %xmm1
+mulss -56(%rbp), %xmm1
+subss %xmm1, %xmm0
+movl -44(%rbp), %eax
+subl $2, %eax
+cvtsi2ssl %eax, %xmm1
+divss %xmm1, %xmm0
+cvtss2sd %xmm0, %xmm0
+sqrtsd %xmm0, %xmm0
+cvtsd2ss %xmm0, %xmm0
+movss %xmm0, -96(%rbp)
+movss -96(%rbp), %xmm0
+cvtss2sd %xmm0, %xmm0
+movss -80(%rbp), %xmm1
+cvtss2sd %xmm1, %xmm1
+sqrtsd %xmm1, %xmm1
+divsd %xmm1, %xmm0
+cvtsd2ss %xmm0, %xmm0
+movss %xmm0, -100(%rbp)
+movss -100(%rbp), %xmm0
+cvtss2sd %xmm0, %xmm0
+movss -60(%rbp), %xmm1
+movl -44(%rbp), %eax
+cvtsi2ssl %eax, %xmm2
+divss %xmm2, %xmm1
+cvtss2sd %xmm1, %xmm1
+sqrtsd %xmm1, %xmm1
+mulsd %xmm1, %xmm0
+cvtsd2ss %xmm0, %xmm0
+movss %xmm0, -104(%rbp)
+movl $0, -108(%rbp)
+movl -108(%rbp), %eax
+cmpl -44(%rbp), %eax
+jge LBB0_8
+movq -32(%rbp), %rax
+movss (%rax), %xmm0
+movq -40(%rbp), %rax
+movss (%rax), %xmm1
+movq -8(%rbp), %rax
+movslq -108(%rbp), %rcx
+mulss (%rax,%rcx,4), %xmm1
+addss %xmm1, %xmm0
+movq -24(%rbp), %rax
+movslq -108(%rbp), %rcx
+movss %xmm0, (%rax,%rcx,4)
+movl -108(%rbp), %eax
+addl $1, %eax
+movl %eax, -108(%rbp)
+jmp LBB0_5
+popq %rbp
+retq
+pushq %rbp
+movq %rsp, %rbp
+xorl %eax, %eax
+movl %eax, %edi
+xorl %eax, %eax
+movl $400, %ecx
+movl %ecx, %edx
+movq ___stack_chk_guard@GOTPCREL(%rip), %rsi
+movq (%rsi), %rsi
+movq %rsi, -8(%rbp)
+movl $0, -1220(%rbp)
+leaq -416(%rbp), %rsi
+movq %rdi, -1240(%rbp)
+movq %rsi, %rdi
+movl %eax, %esi
+movq %rdx, -1248(%rbp)
+movl %eax, -1252(%rbp)
+callq _memset
+leaq -816(%rbp), %rdx
+movq %rdx, %rdi
+movl -1252(%rbp), %esi
+movq -1248(%rbp), %rdx
+callq _memset
+leaq -1216(%rbp), %rdx
+movq %rdx, %rdi
+movl -1252(%rbp), %esi
+movq -1248(%rbp), %rdx
+callq _memset
+xorps %xmm0, %xmm0
+movss %xmm0, -1224(%rbp)
+movss %xmm0, -1228(%rbp)
+movq -1240(%rbp), %rdi
+callq _time
+movl %eax, %ecx
+movl %ecx, %edi
+callq _srand
+movl $0, -1232(%rbp)
+cmpl $100, -1232(%rbp)
+jge LBB1_4
+callq _rand
+cltd
+movl $100, %ecx
+idivl %ecx
+cvtsi2ssl %edx, %xmm0
+movslq -1232(%rbp), %rsi
+movss %xmm0, -416(%rbp,%rsi,4)
+callq _rand
+cltd
+movl $100, %ecx
+idivl %ecx
+cvtsi2ssl %edx, %xmm0
+movslq -1232(%rbp), %rsi
+movss %xmm0, -816(%rbp,%rsi,4)
+movl -1232(%rbp), %eax
+addl $1, %eax
+movl %eax, -1232(%rbp)
+jmp LBB1_1
+leaq -1216(%rbp), %rdx
+leaq -816(%rbp), %rsileaq -416(%rbp), %rdi
+leaq -1224(%rbp), %rcx
+leaq -1228(%rbp), %r8
+movl $100, %r9d
+callq _linfit2
+movq ___stack_chk_guard@GOTPCREL(%rip), %rcx
+movq (%rcx), %rcx
+movq -8(%rbp), %rdx
+cmpq %rdx, %rcx
+jne LBB1_6
+xorl %eax, %eax
+addq $1264, %rsp
+popq %rbp
+retq
+callq ___stack_chk_fail
+ud2

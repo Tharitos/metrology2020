@@ -1,0 +1,15 @@
+git remote add JoolsBlinnikova   https://github.com/JoolsBlinnikova/metrology2020.git
+git remote add Nn0wn             https://github.com/Nn0wn/metrology2020.git
+git remote add contentm4ker      https://github.com/contentm4ker/metrology2020.git
+git remote add kostya1703        https://github.com/kostya1703/metrology2020.git
+git remote add SiarheiZyl        https://github.com/SiarheiZyl/metrology2020.git
+git remote add valeriaivankova98 https://github.com/valeriaivankova98/metrology2020.git
+git remote add Citronnn          https://github.com/Citronnn/metrology2020.git
+git remote add kovinevmv         https://github.com/kovinevmv/metrology2020.git
+git remote add SqrtMinusOne      https://github.com/SqrtMinusOne/metrology2020.git
+git remote add ProstoNekitos     https://github.com/ProstoNekitos/metrology2020.git
+git remote add ierikhon          https://github.com/ierikhon/metrology2020.git
+git remote add Inoretsu          https://github.com/Inoretsu/metrology2020.git
+git remote add PutkovDimi        https://github.com/PutkovDimi/metrology2020.git
+git remote add AleksandrRybin    https://github.com/AleksandrRybin/metrology2020.git
+git remote add chelentos         https://github.com/chelentos/metrology2020.git
